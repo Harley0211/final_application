@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nbspi_login_page">
+
+    <!-- Floating Container -->
+    <LinearLayout
+        android:id="@+id/registrationContainer"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_corners"
+        android:elevation="8dp"
+        android:gravity="center">
+
+        <!-- Registration Title -->
+        <TextView
+            android:id="@+id/registrationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registration"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#373737"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- ID Number Field -->
+        <EditText
+            android:id="@+id/idEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID Number"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:textColorHint="#808080"
+            android:textColor="@color/black"
+            android:background="@drawable/edittext_background" />
+
+        <!-- Username Field -->
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="#808080"
+            android:textColor="@color/black"
+            android:background="@drawable/edittext_background" />
+
+        <!-- Gmail Account Field -->
+        <EditText
+            android:id="@+id/gmailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gmail Account"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="#808080"
+            android:textColor="@color/black"
+            android:background="@drawable/edittext_background" />
+
+        <!-- Password Field -->
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="#808080"
+            android:textColor="@color/black"
+            android:background="@drawable/edittext_background" />
+
+        <!-- Password Strength Indicator -->
+        <ProgressBar
+            android:id="@+id/passwordStrengthBar"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:progress="0"
+            android:progressTint="@color/black"
+            android:max="100"
+            style="?android:attr/progressBarStyleHorizontal" />
+
+        <!-- Confirm Password Field -->
+        <EditText
+            android:id="@+id/confirmPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="#808080"
+            android:textColor="@color/black"
+            android:background="@drawable/edittext_background" />
+
+        <!-- Send Button -->
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#800000"
+            android:textColor="#FFFFFF"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <!-- Existing User Text Outside the Container -->
+    <TextView
+        android:id="@+id/existingUserTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Existing User? Log in here"
+        android:textColor="#0000FF"
+        android:paddingTop="16dp"
+        android:layout_below="@id/registrationContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textStyle="italic"
+        android:textSize="14sp" />
+
+</RelativeLayout>

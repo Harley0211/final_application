@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".FacultyStaffLogsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <ImageButton
+            android:id="@+id/burger_menu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Menu"
+            android:src="@drawable/baseline_menu_24"
+            android:layout_margin="16dp"/>
+
+        <ImageView
+            android:id="@+id/nbspi_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/nbspi_logo"
+            android:contentDescription="NBSPI Logo" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/faculty_log_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nbspi_logo"
+            android:layout_centerHorizontal="true"
+            android:padding="8dp"
+            android:text="Faculty &amp; Staff Logs"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <!-- Date and Time Container -->
+        <LinearLayout
+            android:id="@+id/date_time_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/faculty_log_title"
+            android:padding="8dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <!-- Date -->
+            <TextView
+                android:id="@+id/date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date: "
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+
+            <!-- Time -->
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time: "
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!-- Search and Filter Container -->
+        <LinearLayout
+            android:id="@+id/search_filter_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date_time_container"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginTop="8dp">
+
+            <!-- Search Box -->
+            <EditText
+                android:id="@+id/search_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Search"
+                android:padding="8dp"
+                android:background="@drawable/border_background"
+                android:inputType="text" />
+
+            <!-- Filter Dropdown -->
+            <Spinner
+                android:id="@+id/filter_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/border_background"
+                android:entries="@array/filter_options"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <!-- Table Container -->
+        <ScrollView
+            android:id="@+id/table_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:layout_below="@id/search_filter_container"
+            android:layout_marginTop="8dp">
+
+            <!-- Table Layout -->
+            <TableLayout
+                android:id="@+id/table_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1, 2, 3, 4">
+
+                <!-- Table Header -->
+                <TableRow
+                    android:background="#DDDDDD"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:text="ID"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:text="Name"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:text="Department"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:text="In"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:text="Out"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                </TableRow>
+
+                <!-- Example Table Row for Student Data -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:text="001"
+                        android:padding="8dp"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:text="John Doe"
+                        android:padding="8dp"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:text="College"
+                        android:padding="8dp"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:text="08:00 AM"
+                        android:padding="8dp"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:text="05:00 PM"
+                        android:padding="8dp"
+                        android:textColor="#000000"
+                        android:gravity="center" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="56dp"
+                android:src="@drawable/baseline_add_24"
+                app:backgroundTint="@color/maroon"
+                app:tint="@color/white" />
+
+            <!-- Bottom Navigation View for direct icon display -->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/bottom_navigation_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:name="com.example.finalapplication.BottomNavigationFragment" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

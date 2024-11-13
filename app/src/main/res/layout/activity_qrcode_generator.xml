@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/nbspi_login_page"
+    tools:context=".QRCodeGeneratorActivity">
+
+    <!-- Floating Container -->
+    <LinearLayout
+        android:id="@+id/loginContainer"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_corners"
+        android:elevation="8dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/QRregistrationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QR Registration"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#373737"
+            android:layout_gravity="center_horizontal" />
+
+
+        <EditText
+            android:id="@+id/etID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:layout_below="@id/etID"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerUserType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etName"
+            android:layout_marginBottom="8dp"
+            android:hint="User Type"
+            android:background="@drawable/border_background"/>
+
+        <Spinner
+            android:id="@+id/spinnerDepartment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinnerUserType"
+            android:layout_marginBottom="16dp"
+            android:hint="Department"
+            android:background="@drawable/border_background"/>
+
+        <!-- Generate QR Button -->
+        <Button
+            android:id="@+id/btnGenerateQR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generate QR Code"
+            android:layout_below="@id/spinnerDepartment"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/maroon"/>
+
+        <ImageView
+            android:id="@+id/ivQRCode"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btnGenerateQR"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="QR Code Image" />
+
+        <TextView
+            android:id="@+id/tvQRCodeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivQRCode"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text="[Name]" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:layout_below="@id/tvQRCodeName"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Send Button -->
+        <Button
+            android:id="@+id/btnSendEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send QR Code to Email"
+            android:layout_below="@id/etEmail"
+            android:backgroundTint="@color/maroon"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

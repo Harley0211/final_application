@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/studentlogFragment">
+
+    <fragment
+        android:id="@+id/studentlogFragment"
+        android:name="com.example.finalapplication.StudentLogsFragment"
+        android:label="Student Logs" />
+
+    <fragment
+        android:id="@+id/facultyStaffLogsFragment"
+        android:name="com.example.finalapplication.FacultyStaffLogsFragment"
+        android:label="Faculty &amp; Staff Logs" />
+
+    <fragment
+        android:id="@+id/visitorFragment"
+        android:name="com.example.finalapplication.VisitorFragment"
+        android:label="Visitor Logs" />
+
+    <!-- Add other fragments here -->
+</navigation>

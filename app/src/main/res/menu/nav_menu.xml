@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home" android:title="Home" android:icon="@drawable/baseline_home_filled_24"/>
+        <item android:id="@+id/nav_user_type" android:title="User Type" android:icon="@drawable/ic_users"/>
+
+        <item android:id="@+id/nav_student" android:title="Students" android:icon="@drawable/ic_students" android:visible="true"/>
+        <item android:id="@+id/nav_faculty" android:title="Faculty &amp; Staffs" android:icon="@drawable/ic_teacherandstaff" android:visible="true"/>
+        <item android:id="@+id/nav_visitors" android:title="Visitors" android:icon="@drawable/ic_visitors" android:visible="true"/>
+
+        <item android:id="@+id/nav_incident_reports" android:title="Incident Reports" android:icon="@drawable/baseline_report_24"/>
+        <item android:id="@+id/nav_tools" android:title="Tools/Equipment" android:icon="@drawable/baseline_computer_24"/>
+        <item android:id="@+id/nav_logs" android:title="Logs" android:icon="@drawable/baseline_feed_24"/>
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item android:id="@+id/nav_dev" android:title="For Developers" android:icon="@drawable/baseline_code_24"/>
+            <item android:id="@+id/nav_logout" android:title="Logout" android:icon="@drawable/baseline_logout_24"/>
+        </menu>
+    </item>
+
+</menu>

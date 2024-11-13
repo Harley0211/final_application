@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nbspi_login_page">
+
+    <!-- Floating Container -->
+    <LinearLayout
+        android:id="@+id/loginContainer"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_corners"
+        android:elevation="8dp"
+        android:gravity="center">
+
+        <!-- Login Title -->
+        <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#373737"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Username/ID Field -->
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username/ID"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:textColorHint="#808080"
+            android:textColor="@color/black"
+            android:background="@drawable/edittext_background" />
+
+        <!-- Password Field -->
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="#808080"
+            android:textColor="@color/black"
+            android:background="@drawable/edittext_background" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#800000"
+            android:textColor="#FFFFFF"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <!-- New User Text Outside the Container -->
+    <TextView
+        android:id="@+id/newUserTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New User? Register here"
+        android:textColor="#0000FF"
+        android:paddingTop="16dp"
+        android:layout_below="@id/loginContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textStyle="italic"
+        android:textSize="14sp" />
+
+</RelativeLayout>
